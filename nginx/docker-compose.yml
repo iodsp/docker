@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nginx:
+    container_name: nginx
+    image: iodsp/nginx:test
+    ports:
+      - "80:80"
+    volumes:
+      - /usr/local/adinf/data/nginx/conf/:/conf
+      - /usr/local/adinf/logs/nginx/:/logs
+      - /usr/local/adinf/data/nginx/data/:/data
